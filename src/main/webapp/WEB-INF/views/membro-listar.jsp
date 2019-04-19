@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Sistema de Gestão</title>
+    <title>Lista de Membros</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                             Sedes
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="sede-novo.html">Criar</a>
+                            <a class="dropdown-item" href="#">Criar</a>
                             <a class="dropdown-item" href="#">Listar</a>
                             <a class="dropdown-item" href="#">Editar</a>
                         </div>
@@ -65,32 +65,40 @@
         </nav>
     </header>
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col">
-                <ul class="list-group text-center">
-                    <li class="list-group-item list-group-item-primary">Sedes</li>
-                    <li class="list-group-item">Criar</li>
-                    <li class="list-group-item">Listar</li>
-                    <li class="list-group-item">Editar</li>
-                </ul>
+        <h1>Nova Sede</h1>
+    </div>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="nomeFantasia">Nome fantasia</label>
+                <input type="text" class="form-control" id="nomeFantasia" placeholder="Nome fantasia">
             </div>
-            <div class="col">
-                <ul class="list-group text-center">
-                    <li class="list-group-item list-group-item-primary">Membros</li>
-                    <li class="list-group-item">Criar</li>
-                    <li class="list-group-item">Listar</li>
-                    <li class="list-group-item">Editar</li>
-                </ul>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="federacao">Estado da Federação</label>
+                    <input type="text" class="form-control" id="federacao" placeholder="Estado da Federação">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                </div>
             </div>
-            <div class="col">
-                <ul class="list-group text-center">
-                    <li class="list-group-item list-group-item-primary">Atividades</li>
-                    <li class="list-group-item">Criar</li>
-                    <li class="list-group-item">Listar</li>
-                    <li class="list-group-item">Editar</li>
-                </ul>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" class="form-control" id="telefone" placeholder="Telefone">
+                </div>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="enderecoWeb">Endereço da WEB</label>
+                <input type="text" class="form-control" id="enderecoWeb" placeholder="Endereço da WEB">
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
     </div>
 
     <!-- Bootstrap JS -->
