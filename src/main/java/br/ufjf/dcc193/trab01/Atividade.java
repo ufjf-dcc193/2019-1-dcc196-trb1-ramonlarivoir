@@ -9,21 +9,59 @@ public class Atividade {
     private String descricao;
     private String dataInicio;
     private String dataFim;
-    private String categoria;
-    private Float totalHoras;
+    private Float horasAssistencial;
+    private Float horasExecutiva;
+    private Float horasFinanceira;
+    private Float horasJuridica;
 
     //#region GET / SET
     /**
-     * @return the categoria
+     * @return the horasAssistencial
      */
-    public String getCategoria() {
-        return categoria;
+    public Float getHorasAssistencial() {
+        return horasAssistencial;
     }
     /**
-     * @param categoria the categoria to set
+     * @param horasAssistencial the horasAssistencial to set
      */
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setHorasAssistencial(Float horasAssistencial) {
+        this.horasAssistencial = horasAssistencial;
+    }
+    /**
+     * @return the horasExecutiva
+     */
+    public Float getHorasExecutiva() {
+        return horasExecutiva;
+    }
+    /**
+     * @param horasExecutiva the horasExecutiva to set
+     */
+    public void setHorasExecutiva(Float horasExecutiva) {
+        this.horasExecutiva = horasExecutiva;
+    }
+    /**
+     * @return the horasFinanceira
+     */
+    public Float getHorasFinanceira() {
+        return horasFinanceira;
+    }
+    /**
+     * @param horasFinanceira the horasFinanceira to set
+     */
+    public void setHorasFinanceira(Float horasFinanceira) {
+        this.horasFinanceira = horasFinanceira;
+    }
+    /**
+     * @return the horasJuridica
+     */
+    public Float getHorasJuridica() {
+        return horasJuridica;
+    }
+    /**
+     * @param horasJuridica the horasJuridica to set
+     */
+    public void setHorasJuridica(Float horasJuridica) {
+        this.horasJuridica = horasJuridica;
     }
     /**
      * @return the dataFim
@@ -76,14 +114,5 @@ public class Atividade {
     /**
      * @return the totalHoras
      */
-    public Float getTotalHoras() {
-        return totalHoras;
-    }
-    /**
-     * @param totalHoras the totalHoras to set
-     */
-    public void setTotalHoras(Float totalHoras) {
-        this.totalHoras = totalHoras;
-    }
     //#endregion
 }
