@@ -69,7 +69,8 @@
         <form action="atividade-salvar.html" method="POST">
             <div class="form-group">
                 <label for="titulo">Título</label>
-                <input type="text" class="form-control" id="titulo" name="titulo" value="${atividade.titulo}" placeholder="Título">
+                <input type="text" class="form-control" id="titulo" name="titulo" value="${atividade.titulo}"
+                    placeholder="Título">
             </div>
             <div class="form-group">
                 <label for="descricao">Descrição</label>
@@ -102,8 +103,8 @@
                         placeholder="Carga horária">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="horasJuridica">Carga horária jurídica</label>
-                    <input type="number" class="form-control" id="horasJuridica" name="horasJuridica"
+                    <label for="horasExecutiva">Carga horária executiva</label>
+                    <input type="number" class="form-control" id="horasExecutiva" name="horasExecutiva"
                         placeholder="Carga horária">
                 </div>
                 <div class="form-group col-md-3">
@@ -112,8 +113,8 @@
                         placeholder="Carga horária">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="horasExecutiva">Carga horária executiva</label>
-                    <input type="number" class="form-control" id="horasExecutiva" name="horasExecutiva"
+                    <label for="horasJuridica">Carga horária jurídica</label>
+                    <input type="number" class="form-control" id="horasJuridica" name="horasJuridica"
                         placeholder="Carga horária">
                 </div>
             </div>

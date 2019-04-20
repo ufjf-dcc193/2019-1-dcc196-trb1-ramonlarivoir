@@ -75,9 +75,9 @@
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Horas assistenciais</th>
-                    <th scope="col">Horas judiciais</th>
-                    <th scope="col">Horas financeiras</th>
                     <th scope="col">Horas executivas</th>
+                    <th scope="col">Horas financeiras</th>
+                    <th scope="col">Horas judiciais</th>
                     <th scope="col" colspan="2">Ação</th>
                 </tr>
             </thead>
@@ -86,10 +86,10 @@
                     <tr>
                         <th scope="row">${sede.id}</th>
                         <td>${sede.nomeFantasia}</td>
-                        <td>${sede.federacao}</td>
-                        <td>${sede.cidade}</td>
-                        <td>${sede.bairro}</td>
-                        <td>${sede.enderecoWeb}</td>
+                        <td>${sede.totalHorasAssistencial}</td>
+                        <td>${sede.totalHorasExecutiva}</td>
+                        <td>${sede.totalHorasFinanceira}</td>
+                        <td>${sede.totalHorasJuridica}</td>
                         <td>
                             <form method="POST" action="sede-editar.html">
                                 <input type="hidden" name="id" value="${sede.id}">

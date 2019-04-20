@@ -27,6 +27,10 @@ public class Sede {
     private String bairro;
     private String telefone;
     private String enderecoWeb;
+    private Integer totalHorasAssistencial;
+    private Integer totalHorasExecutiva;
+    private Integer totalHorasFinanceira;
+    private Integer totalHorasJuridica;
 
     @OneToMany(fetch = FetchType.LAZY)
     private List<Membro> membros;
@@ -35,10 +39,94 @@ public class Sede {
     private List<Atividade> atividades;
 
     public Sede() {
-        
+        this.totalHorasAssistencial = 0;
+        this.totalHorasExecutiva = 0;
+        this.totalHorasFinanceira = 0;
+        this.totalHorasJuridica = 0;
+    }
+
+    public void zeraTotalHoras(){
+        this.totalHorasAssistencial = 0;
+        this.totalHorasExecutiva = 0;
+        this.totalHorasFinanceira = 0;
+        this.totalHorasJuridica = 0;
+    }
+
+    public void somaTotalHoras() {
+        zeraTotalHoras();
+        for (Atividade atividade : this.atividades) {
+            this.totalHorasAssistencial += atividade.getHorasAssistencial();
+            this.totalHorasExecutiva += atividade.getHorasExecutiva();
+            this.totalHorasFinanceira += atividade.getHorasFinanceira();
+            this.totalHorasJuridica += atividade.getHorasJuridica();
+        }
     }
 
     //#region GET / SET
+    /**
+     * @return the sede_id
+     */
+    public Long getSede_id() {
+        return sede_id;
+    }
+    /**
+     * @param sede_id the sede_id to set
+     */
+    public void setSede_id(Long sede_id) {
+        this.sede_id = sede_id;
+    }
+    /**
+     * @return the totalHorasAssistencial
+     */
+    public Integer getTotalHorasAssistencial() {
+        return totalHorasAssistencial;
+    }
+    /**
+     * @param totalHorasAssistencial the totalHorasAssistencial to set
+     */
+    public Sede setTotalHorasAssistencial(Integer totalHorasAssistencial) {
+        this.totalHorasAssistencial = totalHorasAssistencial;
+        return this;
+    }
+    /**
+     * @return the totalHorasExecutiva
+     */
+    public Integer getTotalHorasExecutiva() {
+        return totalHorasExecutiva;
+    }
+    /**
+     * @param totalHorasExecutiva the totalHorasExecutiva to set
+     */
+    public Sede setTotalHorasExecutiva(Integer totalHorasExecutiva) {
+        this.totalHorasExecutiva = totalHorasExecutiva;
+        return this;
+    }
+    /**
+     * @return the totalHorasFinanceira
+     */
+    public Integer getTotalHorasFinanceira() {
+        return totalHorasFinanceira;
+    }
+    /**
+     * @param totalHorasFinanceira the totalHorasFinanceira to set
+     */
+    public Sede setTotalHorasFinanceira(Integer totalHorasFinanceira) {
+        this.totalHorasFinanceira = totalHorasFinanceira;
+        return this;
+    }
+    /**
+     * @return the totalHorasJuridica
+     */
+    public Integer getTotalHorasJuridica() {
+        return totalHorasJuridica;
+    }
+    /**
+     * @param totalHorasJuridica the totalHorasJuridica to set
+     */
+    public Sede setTotalHorasJuridica(Integer totalHorasJuridica) {
+        this.totalHorasJuridica = totalHorasJuridica;
+        return this;
+    }
     /**
      * @return the atividades
      */

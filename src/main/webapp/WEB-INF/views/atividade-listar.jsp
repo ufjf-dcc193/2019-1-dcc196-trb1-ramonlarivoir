@@ -78,9 +78,9 @@
                     <th scope="col">Data início</th>
                     <th scope="col">Data fim</th>
                     <th scope="col">Horas assistenciais</th>
-                    <th scope="col">Horas judiciais</th>
-                    <th scope="col">Horas financeiras</th>
                     <th scope="col">Horas executivas</th>
+                    <th scope="col">Horas financeiras</th>
+                    <th scope="col">Horas judiciais</th>
                     <th scope="col">ONG</th>
                     <th scope="col" colspan="2">Ação</th>
                 </tr>
@@ -94,9 +94,9 @@
                         <td>${atividade.dataInicio}</td>
                         <td>${atividade.dataFim}</td>
                         <td>${atividade.horasAssistencial}</td>
-                        <td>${atividade.horasJuridica}</td>
-                        <td>${atividade.horasFinanceira}</td>
                         <td>${atividade.horasExecutiva}</td>
+                        <td>${atividade.horasFinanceira}</td>
+                        <td>${atividade.horasJuridica}</td>
                         <td>${atividade.ongAtividade.nomeFantasia}</td>
                         <td>
                             <form method="POST" action="atividade-editar.html">

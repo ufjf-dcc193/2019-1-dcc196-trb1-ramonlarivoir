@@ -22,10 +22,10 @@ public class Atividade {
     private String descricao;
     private String dataInicio;
     private String dataFim;
-    private Float horasAssistencial;
-    private Float horasExecutiva;
-    private Float horasFinanceira;
-    private Float horasJuridica;
+    private Integer horasAssistencial;
+    private Integer horasExecutiva;
+    private Integer horasFinanceira;
+    private Integer horasJuridica;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Sede ongAtividade;
@@ -64,52 +64,52 @@ public class Atividade {
     /**
      * @return the horasAssistencial
      */
-    public Float getHorasAssistencial() {
+    public Integer getHorasAssistencial() {
         return horasAssistencial;
     }
     /**
      * @param horasAssistencial the horasAssistencial to set
      */
-    public Atividade setHorasAssistencial(Float horasAssistencial) {
+    public Atividade setHorasAssistencial(Integer horasAssistencial) {
         this.horasAssistencial = horasAssistencial;
         return this;
     }
     /**
      * @return the horasExecutiva
      */
-    public Float getHorasExecutiva() {
+    public Integer getHorasExecutiva() {
         return horasExecutiva;
     }
     /**
      * @param horasExecutiva the horasExecutiva to set
      */
-    public Atividade setHorasExecutiva(Float horasExecutiva) {
+    public Atividade setHorasExecutiva(Integer horasExecutiva) {
         this.horasExecutiva = horasExecutiva;
         return this;
     }
     /**
      * @return the horasFinanceira
      */
-    public Float getHorasFinanceira() {
+    public Integer getHorasFinanceira() {
         return horasFinanceira;
     }
     /**
      * @param horasFinanceira the horasFinanceira to set
      */
-    public Atividade setHorasFinanceira(Float horasFinanceira) {
+    public Atividade setHorasFinanceira(Integer horasFinanceira) {
         this.horasFinanceira = horasFinanceira;
         return this;
     }
     /**
      * @return the horasJuridica
      */
-    public Float getHorasJuridica() {
+    public Integer getHorasJuridica() {
         return horasJuridica;
     }
     /**
      * @param horasJuridica the horasJuridica to set
      */
-    public Atividade setHorasJuridica(Float horasJuridica) {
+    public Atividade setHorasJuridica(Integer horasJuridica) {
         this.horasJuridica = horasJuridica;
         return this;
     }

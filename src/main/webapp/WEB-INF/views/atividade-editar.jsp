@@ -66,7 +66,7 @@
         <h1>Editar Atividade</h1>
     </div>
     <div class="container">
-        <form action="atividade-salvar.html" method="POST">
+        <form action="atividade-alterar.html" method="POST">
             <input type="hidden" name="id" value="${atividade.id}">
             <div class="form-group">
                 <label for="titulo">Título</label>
@@ -105,9 +105,9 @@
                         value="${atividade.horasAssistencial}" name="horasAssistencial" placeholder="Carga horária">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="horasJuridica">Carga horária jurídica</label>
-                    <input type="number" class="form-control" id="horasJuridica" value="${atividade.horasJuridica}"
-                        name="horasJuridica" placeholder="Carga horária">
+                    <label for="horasExecutiva">Carga horária executiva</label>
+                    <input type="number" class="form-control" id="horasExecutiva" value="${atividade.horasExecutiva}"
+                        name="horasExecutiva" placeholder="Carga horária">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="horasFinanceira">Carga horária financeira</label>
@@ -115,9 +115,9 @@
                         name="horasFinanceira" placeholder="Carga horária">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="horasExecutiva">Carga horária executiva</label>
-                    <input type="number" class="form-control" id="horasExecutiva" value="${atividade.horasExecutiva}"
-                        name="horasExecutiva" placeholder="Carga horária">
+                    <label for="horasJuridica">Carga horária jurídica</label>
+                    <input type="number" class="form-control" id="horasJuridica" value="${atividade.horasJuridica}"
+                        name="horasJuridica" placeholder="Carga horária">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Salvar</button>
