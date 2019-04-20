@@ -34,7 +34,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="sede-novo.html">Criar</a>
                             <a class="dropdown-item" href="sede-listar.html">Listar</a>
-                            <a class="dropdown-item" href="sede-editar.html">Editar</a>
                         </div>
                     </li>
                     </li>
@@ -46,7 +45,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="membro-novo.html">Criar</a>
                             <a class="dropdown-item" href="membro-listar.html">Listar</a>
-                            <a class="dropdown-item" href="membro-editar.html">Editar</a>
                         </div>
                     </li>
                     </li>
@@ -58,7 +56,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="atividade-novo.html">Criar</a>
                             <a class="dropdown-item" href="atividade-listar.html">Listar</a>
-                            <a class="dropdown-item" href="atividade-editar.html">Editar</a>
                         </div>
                     </li>
                 </ul>
@@ -66,7 +63,10 @@
         </nav>
     </header>
     <div class="container">
-        <h1>Nova Sede</h1>
+        <h1>Lista de Membros</h1>
+    </div>
+    <div class="container">
+        <a href="membro-novo.html" class="btn btn-success">+</a>
     </div>
     <div class="container">
         <table class="table text-center">

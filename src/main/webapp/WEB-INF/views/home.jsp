@@ -33,7 +33,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="sede-novo.html">Criar</a>
                             <a class="dropdown-item" href="sede-listar.html">Listar</a>
-                            <a class="dropdown-item" href="sede-editar.html">Editar</a>
                         </div>
                     </li>
                     </li>
@@ -45,7 +44,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="membro-novo.html">Criar</a>
                             <a class="dropdown-item" href="membro-listar.html">Listar</a>
-                            <a class="dropdown-item" href="membro-editar.html">Editar</a>
                         </div>
                     </li>
                     </li>
@@ -57,7 +55,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="atividade-novo.html">Criar</a>
                             <a class="dropdown-item" href="atividade-listar.html">Listar</a>
-                            <a class="dropdown-item" href="atividade-editar.html">Editar</a>
                         </div>
                     </li>
                 </ul>
@@ -73,8 +70,6 @@
                             class="list-group-item list-group-item-action">Criar</a></li>
                     <li class="list-group-item"><a href="sede-listar.html"
                             class="list-group-item list-group-item-action">Listar</a></li>
-                    <li class="list-group-item"><a href="sede-editar.html"
-                            class="list-group-item list-group-item-action">Editar</a></li>
                 </ul>
             </div>
             <div class="col">
@@ -84,8 +79,6 @@
                             class="list-group-item list-group-item-action">Criar</a></li>
                     <li class="list-group-item"><a href="membro-listar.html"
                             class="list-group-item list-group-item-action">Listar</a></li>
-                    <li class="list-group-item"><a href="membro-editar.html"
-                            class="list-group-item list-group-item-action">Editar</a></li>
                 </ul>
             </div>
             <div class="col">
@@ -95,8 +88,6 @@
                             class="list-group-item list-group-item-action">Criar</a></li>
                     <li class="list-group-item"><a href="atividade-listar.html"
                             class="list-group-item list-group-item-action">Listar</a></li>
-                    <li class="list-group-item"><a href="atividade-editar.html"
-                            class="list-group-item list-group-item-action">Editar</a></li>
                 </ul>
             </div>
         </div>

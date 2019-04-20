@@ -34,7 +34,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="sede-novo.html">Criar</a>
                             <a class="dropdown-item" href="sede-listar.html">Listar</a>
-                            <a class="dropdown-item" href="sede-editar.html">Editar</a>
                         </div>
                     </li>
                     </li>
@@ -46,7 +45,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="membro-novo.html">Criar</a>
                             <a class="dropdown-item" href="membro-listar.html">Listar</a>
-                            <a class="dropdown-item" href="membro-editar.html">Editar</a>
                         </div>
                     </li>
                     </li>
@@ -58,7 +56,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="atividade-novo.html">Criar</a>
                             <a class="dropdown-item" href="atividade-listar.html">Listar</a>
-                            <a class="dropdown-item" href="atividade-editar.html">Editar</a>
                         </div>
                     </li>
                 </ul>
@@ -66,13 +63,13 @@
         </nav>
     </header>
     <div class="container">
-        <h1>Nova Sede</h1>
+        <h1>Nova Atividade</h1>
     </div>
     <div class="container">
         <form action="atividade-salvar.html" method="POST">
             <div class="form-group">
                 <label for="titulo">Título</label>
-                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título">
+                <input type="text" class="form-control" id="titulo" name="titulo" value="${atividade.titulo}" placeholder="Título">
             </div>
             <div class="form-group">
                 <label for="descricao">Descrição</label>
@@ -121,6 +118,7 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <a href="atividade-listar.html" class="btn btn-danger">Cancelar</a>
         </form>
     </div>
 

@@ -34,7 +34,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="sede-novo.html">Criar</a>
                             <a class="dropdown-item" href="sede-listar.html">Listar</a>
-                            <a class="dropdown-item" href="sede-editar.html">Editar</a>
                         </div>
                     </li>
                     </li>
@@ -46,7 +45,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="membro-novo.html">Criar</a>
                             <a class="dropdown-item" href="membro-listar.html">Listar</a>
-                            <a class="dropdown-item" href="membro-editar.html">Editar</a>
                         </div>
                     </li>
                     </li>
@@ -58,7 +56,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="atividade-novo.html">Criar</a>
                             <a class="dropdown-item" href="atividade-listar.html">Listar</a>
-                            <a class="dropdown-item" href="atividade-editar.html">Editar</a>
                         </div>
                     </li>
                 </ul>
@@ -66,7 +63,7 @@
         </nav>
     </header>
     <div class="container">
-        <h1>Nova Sede</h1>
+        <h1>Editar Sede</h1>
     </div>
     <div class="container">
         <form action="sede-salvar.html" method="POST">
@@ -106,6 +103,7 @@
                     placeholder="Endereço da WEB" value="${sede.enderecoWeb}">
             </div>
             <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="sede-listar.html" class="btn btn-danger">Cancelar</a>
         </form>
     </div>
 

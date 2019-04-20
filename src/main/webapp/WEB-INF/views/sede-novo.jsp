@@ -34,7 +34,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="sede-novo.html">Criar</a>
                             <a class="dropdown-item" href="sede-listar.html">Listar</a>
-                            <a class="dropdown-item" href="sede-editar.html">Editar</a>
                         </div>
                     </li>
                     </li>
@@ -46,7 +45,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="membro-novo.html">Criar</a>
                             <a class="dropdown-item" href="membro-listar.html">Listar</a>
-                            <a class="dropdown-item" href="membro-editar.html">Editar</a>
                         </div>
                     </li>
                     </li>
@@ -58,7 +56,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="atividade-novo.html">Criar</a>
                             <a class="dropdown-item" href="atividade-listar.html">Listar</a>
-                            <a class="dropdown-item" href="atividade-editar.html">Editar</a>
                         </div>
                     </li>
                 </ul>
@@ -98,7 +95,8 @@
                 <label for="enderecoWeb">Endereço da WEB</label>
                 <input type="text" class="form-control" id="enderecoWeb" name="enderecoWeb" placeholder="Endereço da WEB">
             </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="sede-listar.html" class="btn btn-danger">Cancelar</a>
         </form>
     </div>
 
