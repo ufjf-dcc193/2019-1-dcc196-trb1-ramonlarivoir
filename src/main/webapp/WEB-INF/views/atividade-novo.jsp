@@ -1,4 +1,5 @@
 <%@page pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -81,7 +82,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="ong">ONG</label>
-                    <select id="ong" name="ong" class="form-control">
+                    <select id="ong" name="ongAtividade" class="form-control">
                         <option selected>Choose...</option>
                         <option>...</option>
                     </select>

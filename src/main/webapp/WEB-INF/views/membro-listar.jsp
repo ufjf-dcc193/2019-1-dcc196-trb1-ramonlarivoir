@@ -1,4 +1,5 @@
 <%@page pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -82,17 +83,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Fulano</td>
-                    <td>fulano@fulano.com</td>
-                    <td>Motorista</td>
-                    <td>12/12/2012</td>
-                    <td>12/12/2013</td>
-                    <td>ONG 1</td>
-                    <td><a href="">Editar</a></td>
-                    <td><a href="">Excluir</a></td>
-                </tr>
+                <c:forEach var="membro" items="${membros}">
+                    <tr>
+                        <th scope="row">${membro.id}</th>
+                        <td>${membro.nome}</td>
+                        <td>${membro.email}</td>
+                        <td>${membro.funcao}</td>
+                        <td>${membro.dataEntrada}</td>
+                        <td>${membro.dataSaida}</td>
+                        <td>${membro.ongMembro.nomeFantasia}</td>
+                        <td><a href="">Editar</a></td>
+                        <td><a href="">Excluir</a></td>
+                    </tr>
+                </c:forEach>
             </tbody>
         </table>
     </div>
