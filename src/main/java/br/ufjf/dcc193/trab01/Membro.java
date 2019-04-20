@@ -1,5 +1,6 @@
 package br.ufjf.dcc193.trab01;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -14,8 +15,9 @@ import javax.persistence.ManyToOne;
 public class Membro {
 
     @Id
+    @Column(name = "membro_id")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
+    private Long membro_id;
     private String nome;
     private String funcao;
     private String email;
@@ -39,20 +41,21 @@ public class Membro {
     /**
      * @param ong the ong to set
      */
-    public void setOngMembro(Sede ong) {
+    public Membro setOngMembro(Sede ong) {
         this.ongMembro = ong;
+        return this;
     }
     /**
      * @return the id
      */
     public Long getId() {
-        return id;
+        return membro_id;
     }
     /**
      * @param id the id to set
      */
     public Membro setId(Long id) {
-        this.id = id;
+        this.membro_id = id;
         return this;
     }
     /**

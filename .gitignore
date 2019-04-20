@@ -2,6 +2,9 @@ HELP.md
 /target/
 !.mvn/wrapper/maven-wrapper.jar
 
+~/gestao.db
+derby.log
+
 ### STS ###
 .apt_generated
 .classpath

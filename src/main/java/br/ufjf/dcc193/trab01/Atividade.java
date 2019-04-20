@@ -1,5 +1,6 @@
 package br.ufjf.dcc193.trab01;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -14,8 +15,9 @@ import javax.persistence.ManyToOne;
 public class Atividade {
 
     @Id
+    @Column(name = "atividade_id")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
+    private Long atividade_id;
     private String titulo;
     private String descricao;
     private String dataInicio;
@@ -34,9 +36,6 @@ public class Atividade {
 
     //#region GET / SET
     /**
-     * @return the id
-     */
-    /**
      * @return the ongAtividade
      */
     public Sede getOngAtividade() {
@@ -45,17 +44,21 @@ public class Atividade {
     /**
      * @param ongAtividade the ongAtividade to set
      */
-    public void setOngAtividade(Sede ongAtividade) {
+    public Atividade setOngAtividade(Sede ongAtividade) {
         this.ongAtividade = ongAtividade;
+        return this;
     }
+    /**
+     * @return the id
+     */
     public Long getId() {
-        return id;
+        return atividade_id;
     }
     /**
      * @param id the id to set
      */
     public Atividade setId(Long id) {
-        this.id = id;
+        this.atividade_id = id;
         return this;
     }
     /**

@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -31,9 +31,9 @@
                             Sedes
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Criar</a>
-                            <a class="dropdown-item" href="#">Listar</a>
-                            <a class="dropdown-item" href="#">Editar</a>
+                            <a class="dropdown-item" href="sede-novo.html">Criar</a>
+                            <a class="dropdown-item" href="sede-listar.html">Listar</a>
+                            <a class="dropdown-item" href="sede-editar.html">Editar</a>
                         </div>
                     </li>
                     </li>
@@ -43,9 +43,9 @@
                             Membros
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Criar</a>
-                            <a class="dropdown-item" href="#">Listar</a>
-                            <a class="dropdown-item" href="#">Editar</a>
+                            <a class="dropdown-item" href="membro-novo.html">Criar</a>
+                            <a class="dropdown-item" href="membro-listar.html">Listar</a>
+                            <a class="dropdown-item" href="membro-editar.html">Editar</a>
                         </div>
                     </li>
                     </li>
@@ -55,9 +55,9 @@
                             Atividades
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Criar</a>
-                            <a class="dropdown-item" href="#">Listar</a>
-                            <a class="dropdown-item" href="#">Editar</a>
+                            <a class="dropdown-item" href="atividade-novo.html">Criar</a>
+                            <a class="dropdown-item" href="atividade-listar.html">Listar</a>
+                            <a class="dropdown-item" href="atividade-editar.html">Editar</a>
                         </div>
                     </li>
                 </ul>
@@ -68,39 +68,43 @@
         <h1>Nova Sede</h1>
     </div>
     <div class="container">
-        <form>
+        <form action="sede-salvar.html" method="POST">
+            <input type="hidden" name="id" value="${sede.id}">
             <div class="form-group">
                 <label for="nomeFantasia">Nome fantasia</label>
                 <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia"
-                    placeholder="Nome fantasia">
+                    placeholder="Nome fantasia" value="${sede.nomeFantasia}">
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="federacao">Estado da Federação</label>
                     <input type="text" class="form-control" id="federacao" name="federacao"
-                        placeholder="Estado da Federação">
+                        placeholder="Estado da Federação" value="${sede.federacao}">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="cidade">Cidade</label>
-                    <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade">
+                    <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade"
+                        value="${sede.cidade}">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="bairro">Bairro</label>
-                    <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro">
+                    <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro"
+                        value="${sede.bairro}">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="telefone">Telefone</label>
-                    <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Telefone">
+                    <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Telefone"
+                        value="${sede.telefone}">
                 </div>
             </div>
             <div class="form-group">
                 <label for="enderecoWeb">Endereço da WEB</label>
                 <input type="text" class="form-control" id="enderecoWeb" name="enderecoWeb"
-                    placeholder="Endereço da WEB">
+                    placeholder="Endereço da WEB" value="${sede.enderecoWeb}">
             </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" class="btn btn-primary">Salvar</button>
         </form>
     </div>
 

@@ -1,6 +1,8 @@
 package br.ufjf.dcc193.trab01;
 
 import java.util.List;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -16,8 +18,9 @@ import javax.persistence.OneToMany;
 public class Sede {
 
     @Id
+    @Column(name = "sede_id")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
+    private Long sede_id;
     private String nomeFantasia;
     private String federacao;
     private String cidade;
@@ -37,16 +40,42 @@ public class Sede {
 
     //#region GET / SET
     /**
+     * @return the atividades
+     */
+    public List<Atividade> getAtividades() {
+        return atividades;
+    }
+    /**
+     * @param atividades the atividades to set
+     */
+    public Sede setAtividades(List<Atividade> atividades) {
+        this.atividades = atividades;
+        return this;
+    }
+    /**
+     * @return the membros
+     */
+    public List<Membro> getMembros() {
+        return membros;
+    }
+    /**
+     * @param membros the membros to set
+     */
+    public Sede setMembros(List<Membro> membros) {
+        this.membros = membros;
+        return this;
+    }
+    /**
      * @return the id
      */
     public Long getId() {
-        return id;
+        return sede_id;
     }
     /**
      * @param id the id to set
      */
     public Sede setId(Long id) {
-        this.id = id;
+        this.sede_id = id;
         return this;
     }
     /**

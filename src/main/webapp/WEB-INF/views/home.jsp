@@ -69,25 +69,34 @@
             <div class="col">
                 <ul class="list-group text-center">
                     <li class="list-group-item list-group-item-primary">Sedes</li>
-                    <li class="list-group-item">Criar</li>
-                    <li class="list-group-item">Listar</li>
-                    <li class="list-group-item">Editar</li>
+                    <li class="list-group-item"><a href="sede-novo.html"
+                            class="list-group-item list-group-item-action">Criar</a></li>
+                    <li class="list-group-item"><a href="sede-listar.html"
+                            class="list-group-item list-group-item-action">Listar</a></li>
+                    <li class="list-group-item"><a href="sede-editar.html"
+                            class="list-group-item list-group-item-action">Editar</a></li>
                 </ul>
             </div>
             <div class="col">
                 <ul class="list-group text-center">
                     <li class="list-group-item list-group-item-primary">Membros</li>
-                    <li class="list-group-item">Criar</li>
-                    <li class="list-group-item">Listar</li>
-                    <li class="list-group-item">Editar</li>
+                    <li class="list-group-item"><a href="membro-novo.html"
+                            class="list-group-item list-group-item-action">Criar</a></li>
+                    <li class="list-group-item"><a href="membro-listar.html"
+                            class="list-group-item list-group-item-action">Listar</a></li>
+                    <li class="list-group-item"><a href="membro-editar.html"
+                            class="list-group-item list-group-item-action">Editar</a></li>
                 </ul>
             </div>
             <div class="col">
                 <ul class="list-group text-center">
                     <li class="list-group-item list-group-item-primary">Atividades</li>
-                    <li class="list-group-item">Criar</li>
-                    <li class="list-group-item">Listar</li>
-                    <li class="list-group-item">Editar</li>
+                    <li class="list-group-item"><a href="atividade-novo.html"
+                            class="list-group-item list-group-item-action">Criar</a></li>
+                    <li class="list-group-item"><a href="atividade-listar.html"
+                            class="list-group-item list-group-item-action">Listar</a></li>
+                    <li class="list-group-item"><a href="atividade-editar.html"
+                            class="list-group-item list-group-item-action">Editar</a></li>
                 </ul>
             </div>
         </div>

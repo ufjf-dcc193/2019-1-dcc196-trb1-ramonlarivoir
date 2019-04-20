@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -32,9 +32,9 @@
                             Sedes
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Criar</a>
-                            <a class="dropdown-item" href="#">Listar</a>
-                            <a class="dropdown-item" href="#">Editar</a>
+                            <a class="dropdown-item" href="sede-novo.html">Criar</a>
+                            <a class="dropdown-item" href="sede-listar.html">Listar</a>
+                            <a class="dropdown-item" href="sede-editar.html">Editar</a>
                         </div>
                     </li>
                     </li>
@@ -44,9 +44,9 @@
                             Membros
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Criar</a>
-                            <a class="dropdown-item" href="#">Listar</a>
-                            <a class="dropdown-item" href="#">Editar</a>
+                            <a class="dropdown-item" href="membro-novo.html">Criar</a>
+                            <a class="dropdown-item" href="membro-listar.html">Listar</a>
+                            <a class="dropdown-item" href="membro-editar.html">Editar</a>
                         </div>
                     </li>
                     </li>
@@ -56,9 +56,9 @@
                             Atividades
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Criar</a>
-                            <a class="dropdown-item" href="#">Listar</a>
-                            <a class="dropdown-item" href="#">Editar</a>
+                            <a class="dropdown-item" href="atividade-novo.html">Criar</a>
+                            <a class="dropdown-item" href="atividade-listar.html">Listar</a>
+                            <a class="dropdown-item" href="atividade-editar.html">Editar</a>
                         </div>
                     </li>
                 </ul>
@@ -84,14 +84,24 @@
             <tbody>
                 <c:forEach var="sede" items="${sedes}">
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row">${sede.id}</th>
                         <td>${sede.nomeFantasia}</td>
                         <td>${sede.federacao}</td>
                         <td>${sede.cidade}</td>
                         <td>${sede.bairro}</td>
                         <td>${sede.enderecoWeb}</td>
-                        <td><a href="">Editar</a></td>
-                        <td><a href="">Excluir</a></td>
+                        <td>
+                            <form method="POST" action="sede-editar.html">
+                                <input type="hidden" name="id" value="${sede.id}">
+                                <button type="submit" class="btn btn-link">Editar</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form method="POST" action="sede-excluir.html">
+                                <input type="hidden" name="id" value="${sede.id}">
+                                <button type="submit" class="btn btn-link">Excluir</button>
+                            </form>
+                        </td>
                     </tr>
                 </c:forEach>
             </tbody>
