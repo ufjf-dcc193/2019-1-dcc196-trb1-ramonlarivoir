@@ -66,57 +66,61 @@
         </nav>
     </header>
     <div class="container">
-        <h1>Nova Sede</h1>
+        <h1>Editar Atividade</h1>
     </div>
     <div class="container">
         <form action="atividade-salvar.html" method="POST">
+            <input type="hidden" name="id" value="${atividade.id}">
             <div class="form-group">
                 <label for="titulo">Título</label>
-                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título">
+                <input type="text" class="form-control" id="titulo" name="titulo" value="${atividade.titulo}"
+                    placeholder="Título">
             </div>
             <div class="form-group">
                 <label for="descricao">Descrição</label>
                 <textarea rows="5" class="form-control" id="descricao" name="descricao"
-                    placeholder="Descrição"></textarea>
+                    placeholder="Descrição">${atividade.descricao}</textarea>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="ong">ONG</label>
-                    <select id="ong" name="ong" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
+                    <select id="ong" name="ongAtividade" class="form-control" required>
+                        <c:forEach var="sede" items="${sedes}">
+                            <option value="${sede.id}">${sede.nomeFantasia}</option>
+                        </c:forEach>
                     </select>
                 </div>
                 <div class="form-group col-md-3">
                     <label for="dataInicio">Data de início</label>
                     <input type="date" class="form-control" id="dataInicio" name="dataInicio"
-                        placeholder="Data de início">
+                        value="${atividade.dataInicio}" placeholder="Data de início">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="dataFim">Data de término</label>
-                    <input type="date" class="form-control" id="dataFim" name="dataFim" placeholder="Data de término">
+                    <input type="date" class="form-control" id="dataFim" name="dataFim" value="${atividade.dataFim}"
+                        placeholder="Data de término">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-3">
                     <label for="horasAssistencial">Carga horária assistencial</label>
-                    <input type="number" class="form-control" id="horasAssistencial" name="horasAssistencial"
-                        placeholder="Carga horária">
+                    <input type="number" class="form-control" id="horasAssistencial"
+                        value="${atividade.horasAssistencial}" name="horasAssistencial" placeholder="Carga horária">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="horasJuridica">Carga horária jurídica</label>
-                    <input type="number" class="form-control" id="horasJuridica" name="horasJuridica"
-                        placeholder="Carga horária">
+                    <input type="number" class="form-control" id="horasJuridica" value="${atividade.horasJuridica}"
+                        name="horasJuridica" placeholder="Carga horária">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="horasFinanceira">Carga horária financeira</label>
-                    <input type="number" class="form-control" id="horasFinanceira" name="horasFinanceira"
-                        placeholder="Carga horária">
+                    <input type="number" class="form-control" id="horasFinanceira" value="${atividade.horasFinanceira}"
+                        name="horasFinanceira" placeholder="Carga horária">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="horasExecutiva">Carga horária executiva</label>
-                    <input type="number" class="form-control" id="horasExecutiva" name="horasExecutiva"
-                        placeholder="Carga horária">
+                    <input type="number" class="form-control" id="horasExecutiva" value="${atividade.horasExecutiva}"
+                        name="horasExecutiva" placeholder="Carga horária">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>

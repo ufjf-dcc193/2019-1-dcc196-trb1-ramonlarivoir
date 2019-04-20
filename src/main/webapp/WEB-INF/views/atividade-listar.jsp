@@ -76,41 +76,42 @@
                     <th scope="col">Título</th>
                     <th scope="col">Descrição</th>
                     <th scope="col">Data início</th>
-                    <th scope="col">Data fim</th> 
+                    <th scope="col">Data fim</th>
                     <th scope="col">Horas assistenciais</th>
                     <th scope="col">Horas judiciais</th>
                     <th scope="col">Horas financeiras</th>
                     <th scope="col">Horas executivas</th>
+                    <th scope="col">ONG</th>
                     <th scope="col" colspan="2">Ação</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Atividade 1</td>
-                    <td>dasdkjaskj askjdkajsh kjdhkajsjdh kajsdkakj shkajhd kajsd kjasjkjhk ajhjkhk jhkjhkjh kjh kjd haisudhiduhaisdh kajsdk jhasiduh kajsdkja hskjadhk ushaiudhaskj aksjhd</td>
-                    <td>12/12/2012</td>
-                    <td>12/12/2012</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td><a href="">Editar</a></td>
-                    <td><a href="">Excluir</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Atividade 2</td>
-                    <td>dasdkjaskj askjdkajsh kjdhkajsjdh kajsdkakj shkajhd kajsd kjasjkjhk ajhjkhk jhkjhkjh kjh kjd haisudhiduhaisdh kajsdk jhasiduh kajsdkja hskjadhk ushaiudhaskj aksjhd</td>
-                    <td>12/12/2012</td>
-                    <td>12/12/2012</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td><a href="">Editar</a></td>
-                    <td><a href="">Excluir</a></td>
-                </tr>
+                <c:forEach var="atividade" items="${atividades}">
+                    <tr>
+                        <th scope="row">${atividade.id}</th>
+                        <td>${atividade.titulo}</td>
+                        <td>${atividade.descricao}</td>
+                        <td>${atividade.dataInicio}</td>
+                        <td>${atividade.dataFim}</td>
+                        <td>${atividade.horasAssistencial}</td>
+                        <td>${atividade.horasJuridica}</td>
+                        <td>${atividade.horasFinanceira}</td>
+                        <td>${atividade.horasExecutiva}</td>
+                        <td>${atividade.ongAtividade.nomeFantasia}</td>
+                        <td>
+                            <form method="POST" action="atividade-editar.html">
+                                <input type="hidden" name="id" value="${atividade.id}">
+                                <button type="submit" class="btn btn-link">Editar</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form method="POST" action="atividade-excluir.html">
+                                <input type="hidden" name="id" value="${atividade.id}">
+                                <button type="submit" class="btn btn-link">Excluir</button>
+                            </form>
+                        </td>
+                    </tr>
+                </c:forEach>
             </tbody>
         </table>
     </div>

@@ -17,6 +17,8 @@ public class MembroController {
     SedeRepository srep;
     @Autowired
     MembroRepository mrep;
+    @Autowired
+    AtividadeRepository arep;
 
     @RequestMapping("membro-novo.html")
     public ModelAndView novo() {
@@ -41,6 +43,24 @@ public class MembroController {
     public RedirectView salvar(Membro m) {
         mrep.save(m);
         
+        return new RedirectView("membro-listar.html");
+    }
+
+    @RequestMapping("membro-editar.html")
+    public ModelAndView editar(Membro m) {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("membro-editar");
+        Membro membro = mrep.getOne(m.getId());
+        mv.addObject("membro", membro);
+        List<Sede> sedes = srep.findAll();
+        mv.addObject("sedes", sedes);
+        
+        return mv;
+    }
+
+    @RequestMapping("membro-excluir.html")
+    RedirectView remove(Membro m){
+        mrep.deleteById(m.getId());
         return new RedirectView("membro-listar.html");
     }
 }

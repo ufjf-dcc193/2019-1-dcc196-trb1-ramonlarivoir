@@ -82,9 +82,10 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="ong">ONG</label>
-                    <select id="ong" name="ongAtividade" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
+                    <select id="ong" name="ongAtividade" class="form-control" required>
+                        <c:forEach var="sede" items="${sedes}">
+                            <option value="${sede.id}">${sede.nomeFantasia}</option>
+                        </c:forEach>
                     </select>
                 </div>
                 <div class="form-group col-md-3">

@@ -92,8 +92,18 @@
                         <td>${membro.dataEntrada}</td>
                         <td>${membro.dataSaida}</td>
                         <td>${membro.ongMembro.nomeFantasia}</td>
-                        <td><a href="">Editar</a></td>
-                        <td><a href="">Excluir</a></td>
+                        <td>
+                            <form method="POST" action="membro-editar.html">
+                                <input type="hidden" name="id" value="${membro.id}">
+                                <button type="submit" class="btn btn-link">Editar</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form method="POST" action="membro-excluir.html">
+                                <input type="hidden" name="id" value="${membro.id}">
+                                <button type="submit" class="btn btn-link">Excluir</button>
+                            </form>
+                        </td>
                     </tr>
                 </c:forEach>
             </tbody>

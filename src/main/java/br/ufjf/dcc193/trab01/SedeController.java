@@ -15,6 +15,10 @@ import org.springframework.web.servlet.view.RedirectView;
 public class SedeController {
     @Autowired
     SedeRepository srep;
+    @Autowired
+    MembroRepository mrep;
+    @Autowired
+    AtividadeRepository arep;
 
     @RequestMapping("sede-novo.html")
     public String novo() {
@@ -49,11 +53,20 @@ public class SedeController {
     }
 
     @RequestMapping("sede-excluir.html")
-    ModelAndView remove(Sede s){
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("sede-listar");
+    RedirectView remove(Sede s){
+        // Sede sede = srep.getOne(s.getId());
+        // List<Atividade> ats = sede.getAtividades();
+        // for (Atividade at : ats) {
+        //     arep.deleteById(at.getId());
+        //     sede.getAtividades().remove(at);
+        // }
+        // List<Membro> ms = sede.getMembros();
+        // for (Membro m : ms) {
+        //     mrep.deleteById(m.getId());
+        //     sede.getMembros().remove(m);
+        // }
+        // srep.save(sede);
         srep.deleteById(s.getId());
-        mv.addObject("sede", s);
-        return mv;
+        return new RedirectView("sede-listar.html");
     }
 }
