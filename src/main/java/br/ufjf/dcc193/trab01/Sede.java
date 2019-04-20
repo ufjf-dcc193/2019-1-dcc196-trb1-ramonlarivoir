@@ -1,5 +1,7 @@
 package br.ufjf.dcc193.trab01;
 
+import java.util.List;
+
 /**
  * Sede
  */
@@ -11,8 +13,34 @@ public class Sede {
     private String bairro;
     private String telefone;
     private String enderecoWeb;
+    private List<Membro> membros;
+    private List<Atividade> atividades;
 
     //#region GET / SET
+    /**
+     * @return the atividades
+     */
+    public List<Atividade> getAtividades() {
+        return atividades;
+    }
+    /**
+     * @param atividades the atividades to set
+     */
+    public void setAtividades(List<Atividade> atividades) {
+        this.atividades = atividades;
+    }
+    /**
+     * @return the membros
+     */
+    public List<Membro> getMembros() {
+        return membros;
+    }
+    /**
+     * @param membros the membros to set
+     */
+    public void setMembros(List<Membro> membros) {
+        this.membros = membros;
+    }
     /**
      * @return the bairro
      */

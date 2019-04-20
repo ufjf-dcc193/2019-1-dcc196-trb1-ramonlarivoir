@@ -4,18 +4,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * SedeController
+ * AtividadeController
  */
 @Controller
-public class SedeController {
+public class AtividadeController {
 
-    @RequestMapping("sede-novo.html")
+    @RequestMapping("atividade-novo.html")
     public String novo() {
-        return "sede-novo";
+        return "atividade-novo";
     }
 
-    @RequestMapping("sede-listar.html")
+    @RequestMapping("atividade-listar.html")
     public String listar() {
-        return "sede-listar";
+        return "atividade-listar";
     }
 }

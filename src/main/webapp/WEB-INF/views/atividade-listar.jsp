@@ -68,37 +68,50 @@
         <h1>Nova Sede</h1>
     </div>
     <div class="container">
-        <form>
-            <div class="form-group">
-                <label for="nomeFantasia">Nome fantasia</label>
-                <input type="text" class="form-control" id="nomeFantasia" placeholder="Nome fantasia">
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="federacao">Estado da Federação</label>
-                    <input type="text" class="form-control" id="federacao" placeholder="Estado da Federação">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="cidade">Cidade</label>
-                    <input type="text" class="form-control" id="cidade" placeholder="Cidade">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="bairro">Bairro</label>
-                    <input type="text" class="form-control" id="bairro" placeholder="Bairro">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" class="form-control" id="telefone" placeholder="Telefone">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="enderecoWeb">Endereço da WEB</label>
-                <input type="text" class="form-control" id="enderecoWeb" placeholder="Endereço da WEB">
-            </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
-        </form>
+        <table class="table text-center table-striped text-middle">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Data início</th>
+                    <th scope="col">Data fim</th> 
+                    <th scope="col">Horas assistenciais</th>
+                    <th scope="col">Horas judiciais</th>
+                    <th scope="col">Horas financeiras</th>
+                    <th scope="col">Horas executivas</th>
+                    <th scope="col" colspan="2">Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Atividade 1</td>
+                    <td>dasdkjaskj askjdkajsh kjdhkajsjdh kajsdkakj shkajhd kajsd kjasjkjhk ajhjkhk jhkjhkjh kjh kjd haisudhiduhaisdh kajsdk jhasiduh kajsdkja hskjadhk ushaiudhaskj aksjhd</td>
+                    <td>12/12/2012</td>
+                    <td>12/12/2012</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td><a href="">Editar</a></td>
+                    <td><a href="">Excluir</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Atividade 2</td>
+                    <td>dasdkjaskj askjdkajsh kjdhkajsjdh kajsdkakj shkajhd kajsd kjasjkjhk ajhjkhk jhkjhkjh kjh kjd haisudhiduhaisdh kajsdk jhasiduh kajsdkja hskjadhk ushaiudhaskj aksjhd</td>
+                    <td>12/12/2012</td>
+                    <td>12/12/2012</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td><a href="">Editar</a></td>
+                    <td><a href="">Excluir</a></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <!-- Bootstrap JS -->

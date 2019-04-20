@@ -70,32 +70,36 @@
     <div class="container">
         <form>
             <div class="form-group">
-                <label for="nomeFantasia">Nome fantasia</label>
-                <input type="text" class="form-control" id="nomeFantasia" placeholder="Nome fantasia">
+                <label for="nome">Nome completo</label>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome completo">
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="federacao">Estado da Federação</label>
-                    <input type="text" class="form-control" id="federacao" placeholder="Estado da Federação">
+                    <label for="funcao">Função</label>
+                    <input type="text" class="form-control" id="funcao" name="funcao" placeholder="Função">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="cidade">Cidade</label>
-                    <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="seu@email.com">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="bairro">Bairro</label>
-                    <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+                    <label for="ong">ONG</label>
+                    <select id="ong" name="ong" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" class="form-control" id="telefone" placeholder="Telefone">
+                <div class="form-group col-md-3">
+                    <label for="dataEntrada">Data de entrada</label>
+                    <input type="date" class="form-control" id="dataEntrada" name="dataEntrada"
+                        placeholder="Dada de entrada">
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="enderecoWeb">Endereço da WEB</label>
-                <input type="text" class="form-control" id="enderecoWeb" placeholder="Endereço da WEB">
+                <div class="form-group col-md-3">
+                    <label for="dataSaida">Data de saída</label>
+                    <input type="date" class="form-control" id="dataSaida" name="dataSaida" placeholder="Data de saída">
+                </div>
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>

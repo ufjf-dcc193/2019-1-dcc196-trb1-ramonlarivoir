@@ -68,37 +68,33 @@
         <h1>Nova Sede</h1>
     </div>
     <div class="container">
-        <form>
-            <div class="form-group">
-                <label for="nomeFantasia">Nome fantasia</label>
-                <input type="text" class="form-control" id="nomeFantasia" placeholder="Nome fantasia">
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="federacao">Estado da Federação</label>
-                    <input type="text" class="form-control" id="federacao" placeholder="Estado da Federação">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="cidade">Cidade</label>
-                    <input type="text" class="form-control" id="cidade" placeholder="Cidade">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="bairro">Bairro</label>
-                    <input type="text" class="form-control" id="bairro" placeholder="Bairro">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" class="form-control" id="telefone" placeholder="Telefone">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="enderecoWeb">Endereço da WEB</label>
-                <input type="text" class="form-control" id="enderecoWeb" placeholder="Endereço da WEB">
-            </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
-        </form>
+        <table class="table text-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Função</th>
+                    <th scope="col">Data de entrada</th>
+                    <th scope="col">Data de saída</th>
+                    <th scope="col">ONG</th>
+                    <th scope="col" colspan="2">Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Fulano</td>
+                    <td>fulano@fulano.com</td>
+                    <td>Motorista</td>
+                    <td>12/12/2012</td>
+                    <td>12/12/2013</td>
+                    <td>ONG 1</td>
+                    <td><a href="">Editar</a></td>
+                    <td><a href="">Excluir</a></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <!-- Bootstrap JS -->

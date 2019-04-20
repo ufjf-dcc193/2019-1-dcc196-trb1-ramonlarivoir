@@ -70,32 +70,53 @@
     <div class="container">
         <form>
             <div class="form-group">
-                <label for="nomeFantasia">Nome fantasia</label>
-                <input type="text" class="form-control" id="nomeFantasia" placeholder="Nome fantasia">
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="federacao">Estado da Federação</label>
-                    <input type="text" class="form-control" id="federacao" placeholder="Estado da Federação">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="cidade">Cidade</label>
-                    <input type="text" class="form-control" id="cidade" placeholder="Cidade">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="bairro">Bairro</label>
-                    <input type="text" class="form-control" id="bairro" placeholder="Bairro">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" class="form-control" id="telefone" placeholder="Telefone">
-                </div>
+                <label for="titulo">Título</label>
+                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título">
             </div>
             <div class="form-group">
-                <label for="enderecoWeb">Endereço da WEB</label>
-                <input type="text" class="form-control" id="enderecoWeb" placeholder="Endereço da WEB">
+                <label for="descricao">Descrição</label>
+                <textarea rows="5" class="form-control" id="descricao" name="descricao"
+                    placeholder="Descrição"></textarea>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="ong">ONG</label>
+                    <select id="ong" name="ong" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="dataInicio">Data de início</label>
+                    <input type="date" class="form-control" id="dataInicio" name="dataInicio"
+                        placeholder="Data de início">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="dataFim">Data de término</label>
+                    <input type="date" class="form-control" id="dataFim" name="dataFim" placeholder="Data de término">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="horasAssistencial">Carga horária assistencial</label>
+                    <input type="number" class="form-control" id="horasAssistencial" name="horasAssistencial"
+                        placeholder="Carga horária">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="horasJuridica">Carga horária jurídica</label>
+                    <input type="number" class="form-control" id="horasJuridica" name="horasJuridica"
+                        placeholder="Carga horária">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="horasFinanceira">Carga horária financeira</label>
+                    <input type="number" class="form-control" id="horasFinanceira" name="horasFinanceira"
+                        placeholder="Carga horária">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="horasExecutiva">Carga horária executiva</label>
+                    <input type="number" class="form-control" id="horasExecutiva" name="horasExecutiva"
+                        placeholder="Carga horária">
+                </div>
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>

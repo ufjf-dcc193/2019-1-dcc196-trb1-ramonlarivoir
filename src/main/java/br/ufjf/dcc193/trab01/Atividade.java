@@ -13,8 +13,21 @@ public class Atividade {
     private Float horasExecutiva;
     private Float horasFinanceira;
     private Float horasJuridica;
+    private Sede ong;
 
     //#region GET / SET
+    /**
+     * @return the ong
+     */
+    public Sede getOng() {
+        return ong;
+    }
+    /**
+     * @param ong the ong to set
+     */
+    public void setOng(Sede ong) {
+        this.ong = ong;
+    }
     /**
      * @return the horasAssistencial
      */
