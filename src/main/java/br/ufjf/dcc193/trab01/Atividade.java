@@ -1,10 +1,19 @@
 package br.ufjf.dcc193.trab01;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * Atividade
  */
+@Entity
 public class Atividade {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
     private String titulo;
     private String descricao;
     private String dataInicio;
@@ -13,20 +22,24 @@ public class Atividade {
     private Float horasExecutiva;
     private Float horasFinanceira;
     private Float horasJuridica;
-    private Sede ong;
+
+    public Atividade() {
+
+    }
 
     //#region GET / SET
     /**
-     * @return the ong
+     * @return the id
      */
-    public Sede getOng() {
-        return ong;
+    public Long getId() {
+        return id;
     }
     /**
-     * @param ong the ong to set
+     * @param id the id to set
      */
-    public void setOng(Sede ong) {
-        this.ong = ong;
+    public Atividade setId(Long id) {
+        this.id = id;
+        return this;
     }
     /**
      * @return the horasAssistencial
@@ -37,8 +50,9 @@ public class Atividade {
     /**
      * @param horasAssistencial the horasAssistencial to set
      */
-    public void setHorasAssistencial(Float horasAssistencial) {
+    public Atividade setHorasAssistencial(Float horasAssistencial) {
         this.horasAssistencial = horasAssistencial;
+        return this;
     }
     /**
      * @return the horasExecutiva
@@ -49,8 +63,9 @@ public class Atividade {
     /**
      * @param horasExecutiva the horasExecutiva to set
      */
-    public void setHorasExecutiva(Float horasExecutiva) {
+    public Atividade setHorasExecutiva(Float horasExecutiva) {
         this.horasExecutiva = horasExecutiva;
+        return this;
     }
     /**
      * @return the horasFinanceira
@@ -61,8 +76,9 @@ public class Atividade {
     /**
      * @param horasFinanceira the horasFinanceira to set
      */
-    public void setHorasFinanceira(Float horasFinanceira) {
+    public Atividade setHorasFinanceira(Float horasFinanceira) {
         this.horasFinanceira = horasFinanceira;
+        return this;
     }
     /**
      * @return the horasJuridica
@@ -73,8 +89,9 @@ public class Atividade {
     /**
      * @param horasJuridica the horasJuridica to set
      */
-    public void setHorasJuridica(Float horasJuridica) {
+    public Atividade setHorasJuridica(Float horasJuridica) {
         this.horasJuridica = horasJuridica;
+        return this;
     }
     /**
      * @return the dataFim
@@ -85,8 +102,9 @@ public class Atividade {
     /**
      * @param dataFim the dataFim to set
      */
-    public void setDataFim(String dataFim) {
+    public Atividade setDataFim(String dataFim) {
         this.dataFim = dataFim;
+        return this;
     }
     /**
      * @return the dataInicio
@@ -97,8 +115,9 @@ public class Atividade {
     /**
      * @param dataInicio the dataInicio to set
      */
-    public void setDataInicio(String dataInicio) {
+    public Atividade setDataInicio(String dataInicio) {
         this.dataInicio = dataInicio;
+        return this;
     }
     /**
      * @return the descricao
@@ -109,8 +128,9 @@ public class Atividade {
     /**
      * @param descricao the descricao to set
      */
-    public void setDescricao(String descricao) {
+    public Atividade setDescricao(String descricao) {
         this.descricao = descricao;
+        return this;
     }
     /**
      * @return the titulo
@@ -121,8 +141,9 @@ public class Atividade {
     /**
      * @param titulo the titulo to set
      */
-    public void setTitulo(String titulo) {
+    public Atividade setTitulo(String titulo) {
         this.titulo = titulo;
+        return this;
     }
     /**
      * @return the totalHoras

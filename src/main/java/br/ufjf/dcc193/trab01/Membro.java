@@ -1,29 +1,42 @@
 package br.ufjf.dcc193.trab01;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * Membro
  */
+@Entity
 public class Membro {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
     private String nome;
     private String funcao;
     private String email;
     private String dataEntrada;
     private String dataSaida;
-    private Sede ong;
+
+    public Membro() {
+
+    }
 
     //#region GET / SET
     /**
-     * @return the ong
+     * @return the id
      */
-    public Sede getOng() {
-        return ong;
+    public Long getId() {
+        return id;
     }
     /**
-     * @param ong the ong to set
+     * @param id the id to set
      */
-    public void setOng(Sede ong) {
-        this.ong = ong;
+    public Membro setId(Long id) {
+        this.id = id;
+        return this;
     }
     /**
      * @return the dataEntrada
@@ -34,8 +47,9 @@ public class Membro {
     /**
      * @param dataEntrada the dataEntrada to set
      */
-    public void setDataEntrada(String dataEntrada) {
+    public Membro setDataEntrada(String dataEntrada) {
         this.dataEntrada = dataEntrada;
+        return this;
     }
     /**
      * @return the dataSaida
@@ -46,8 +60,9 @@ public class Membro {
     /**
      * @param dataSaida the dataSaida to set
      */
-    public void setDataSaida(String dataSaida) {
+    public Membro setDataSaida(String dataSaida) {
         this.dataSaida = dataSaida;
+        return this;
     }
     /**
      * @return the email
@@ -58,8 +73,9 @@ public class Membro {
     /**
      * @param email the email to set
      */
-    public void setEmail(String email) {
+    public Membro setEmail(String email) {
         this.email = email;
+        return this;
     }
     /**
      * @return the funcao
@@ -70,8 +86,9 @@ public class Membro {
     /**
      * @param funcao the funcao to set
      */
-    public void setFuncao(String funcao) {
+    public Membro setFuncao(String funcao) {
         this.funcao = funcao;
+        return this;
     }
     /**
      * @return the nome
@@ -82,8 +99,9 @@ public class Membro {
     /**
      * @param nome the nome to set
      */
-    public void setNome(String nome) {
+    public Membro setNome(String nome) {
         this.nome = nome;
+        return this;
     }
     //#endregion
 }

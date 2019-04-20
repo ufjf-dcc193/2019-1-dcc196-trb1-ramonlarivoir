@@ -1,45 +1,43 @@
 package br.ufjf.dcc193.trab01;
 
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * Sede
  */
+@Entity
 public class Sede {
 
-    private String nomeFansatasia;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+    private String nomeFantasia;
     private String federacao;
     private String cidade;
     private String bairro;
     private String telefone;
     private String enderecoWeb;
-    private List<Membro> membros;
-    private List<Atividade> atividades;
+
+    public Sede() {
+        
+    }
 
     //#region GET / SET
     /**
-     * @return the atividades
+     * @return the id
      */
-    public List<Atividade> getAtividades() {
-        return atividades;
+    public Long getId() {
+        return id;
     }
     /**
-     * @param atividades the atividades to set
+     * @param id the id to set
      */
-    public void setAtividades(List<Atividade> atividades) {
-        this.atividades = atividades;
-    }
-    /**
-     * @return the membros
-     */
-    public List<Membro> getMembros() {
-        return membros;
-    }
-    /**
-     * @param membros the membros to set
-     */
-    public void setMembros(List<Membro> membros) {
-        this.membros = membros;
+    public Sede setId(Long id) {
+        this.id = id;
+        return this;
     }
     /**
      * @return the bairro
@@ -50,8 +48,9 @@ public class Sede {
     /**
      * @param bairro the bairro to set
      */
-    public void setBairro(String bairro) {
+    public Sede setBairro(String bairro) {
         this.bairro = bairro;
+        return this;
     }
     /**
      * @return the cidade
@@ -62,8 +61,9 @@ public class Sede {
     /**
      * @param cidade the cidade to set
      */
-    public void setCidade(String cidade) {
+    public Sede setCidade(String cidade) {
         this.cidade = cidade;
+        return this;
     }
     /**
      * @return the enderecoWeb
@@ -74,8 +74,9 @@ public class Sede {
     /**
      * @param enderecoWeb the enderecoWeb to set
      */
-    public void setEnderecoWeb(String enderecoWeb) {
+    public Sede setEnderecoWeb(String enderecoWeb) {
         this.enderecoWeb = enderecoWeb;
+        return this;
     }
     /**
      * @return the federacao
@@ -86,20 +87,22 @@ public class Sede {
     /**
      * @param federacao the federacao to set
      */
-    public void setFederacao(String federacao) {
+    public Sede setFederacao(String federacao) {
         this.federacao = federacao;
+        return this;
     }
     /**
-     * @return the nomeFansatasia
+     * @return the nomeFantasia
      */
-    public String getNomeFansatasia() {
-        return nomeFansatasia;
+    public String getNomeFantasia() {
+        return nomeFantasia;
     }
     /**
-     * @param nomeFansatasia the nomeFansatasia to set
+     * @param nomeFantasia the nomeFansatasia to set
      */
-    public void setNomeFansatasia(String nomeFansatasia) {
-        this.nomeFansatasia = nomeFansatasia;
+    public Sede setNomeFantasia(String nomeFantasia) {
+        this.nomeFantasia = nomeFantasia;
+        return this;
     }
     /**
      * @return the telefone
@@ -110,8 +113,9 @@ public class Sede {
     /**
      * @param telefone the telefone to set
      */
-    public void setTelefone(String telefone) {
+    public Sede setTelefone(String telefone) {
         this.telefone = telefone;
+        return this;
     }
     //#endregion
 }
