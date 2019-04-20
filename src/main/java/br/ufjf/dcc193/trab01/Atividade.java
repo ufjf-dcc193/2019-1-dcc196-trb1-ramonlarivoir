@@ -1,9 +1,11 @@
 package br.ufjf.dcc193.trab01;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  * Atividade
@@ -23,6 +25,9 @@ public class Atividade {
     private Float horasFinanceira;
     private Float horasJuridica;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Sede ongAtividade;
+
     public Atividade() {
 
     }
@@ -31,6 +36,18 @@ public class Atividade {
     /**
      * @return the id
      */
+    /**
+     * @return the ongAtividade
+     */
+    public Sede getOngAtividade() {
+        return ongAtividade;
+    }
+    /**
+     * @param ongAtividade the ongAtividade to set
+     */
+    public void setOngAtividade(Sede ongAtividade) {
+        this.ongAtividade = ongAtividade;
+    }
     public Long getId() {
         return id;
     }

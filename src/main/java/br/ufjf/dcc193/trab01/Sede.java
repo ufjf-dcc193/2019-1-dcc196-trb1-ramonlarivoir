@@ -1,9 +1,13 @@
 package br.ufjf.dcc193.trab01;
 
+import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
 
 /**
  * Sede
@@ -20,6 +24,12 @@ public class Sede {
     private String bairro;
     private String telefone;
     private String enderecoWeb;
+
+    @OneToMany(fetch = FetchType.LAZY)
+    private List<Membro> membros;
+
+    @OneToMany(fetch = FetchType.LAZY)
+    private List<Atividade> atividades;
 
     public Sede() {
         

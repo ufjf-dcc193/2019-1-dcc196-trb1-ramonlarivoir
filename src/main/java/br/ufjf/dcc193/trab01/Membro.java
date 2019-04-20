@@ -1,9 +1,11 @@
 package br.ufjf.dcc193.trab01;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  * Membro
@@ -20,11 +22,26 @@ public class Membro {
     private String dataEntrada;
     private String dataSaida;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Sede ongMembro;
+
     public Membro() {
 
     }
 
     //#region GET / SET
+    /**
+     * @return the ong
+     */
+    public Sede getOngMembro() {
+        return ongMembro;
+    }
+    /**
+     * @param ong the ong to set
+     */
+    public void setOngMembro(Sede ong) {
+        this.ongMembro = ong;
+    }
     /**
      * @return the id
      */
