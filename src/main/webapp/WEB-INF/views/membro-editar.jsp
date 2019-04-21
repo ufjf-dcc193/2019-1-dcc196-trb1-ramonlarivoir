@@ -70,18 +70,18 @@
             <input type="hidden" name="id" value="${membro.id}">
             <div class="form-group">
                 <label for="nome">Nome completo</label>
-                <input type="text" class="form-control" id="nome" name="nome" value="${membro.nome}"
+                <input required type="text" class="form-control" id="nome" name="nome" value="${membro.nome}"
                     placeholder="Nome completo">
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="funcao">Função</label>
-                    <input type="text" class="form-control" id="funcao" name="funcao" value="${membro.funcao}"
+                    <input required type="text" class="form-control" id="funcao" name="funcao" value="${membro.funcao}"
                         placeholder="Função">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" value="${membro.email}"
+                    <input required type="email" class="form-control" id="email" name="email" value="${membro.email}"
                         placeholder="seu@email.com">
                 </div>
             </div>
@@ -96,12 +96,12 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="dataEntrada">Data de entrada</label>
-                    <input type="date" class="form-control" id="dataEntrada" name="dataEntrada"
+                    <input required type="date" class="form-control" id="dataEntrada" name="dataEntrada"
                         value="${membro.dataEntrada}" placeholder="Dada de entrada">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="dataSaida">Data de saída</label>
-                    <input type="date" class="form-control" id="dataSaida" name="dataSaida" value="${membro.dataSaida}"
+                    <input required type="date" class="form-control" id="dataSaida" name="dataSaida" value="${membro.dataSaida}"
                         placeholder="Data de saída">
                 </div>
             </div>

@@ -70,12 +70,12 @@
             <input type="hidden" name="id" value="${atividade.id}">
             <div class="form-group">
                 <label for="titulo">Título</label>
-                <input type="text" class="form-control" id="titulo" name="titulo" value="${atividade.titulo}"
+                <input required type="text" class="form-control" id="titulo" name="titulo" value="${atividade.titulo}"
                     placeholder="Título">
             </div>
             <div class="form-group">
                 <label for="descricao">Descrição</label>
-                <textarea rows="5" class="form-control" id="descricao" name="descricao"
+                <textarea required rows="5" class="form-control" id="descricao" name="descricao"
                     placeholder="Descrição">${atividade.descricao}</textarea>
             </div>
             <div class="form-row">
@@ -89,34 +89,34 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="dataInicio">Data de início</label>
-                    <input type="date" class="form-control" id="dataInicio" name="dataInicio"
+                    <input required type="date" class="form-control" id="dataInicio" name="dataInicio"
                         value="${atividade.dataInicio}" placeholder="Data de início">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="dataFim">Data de término</label>
-                    <input type="date" class="form-control" id="dataFim" name="dataFim" value="${atividade.dataFim}"
+                    <input required type="date" class="form-control" id="dataFim" name="dataFim" value="${atividade.dataFim}"
                         placeholder="Data de término">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-3">
                     <label for="horasAssistencial">Carga horária assistencial</label>
-                    <input type="number" class="form-control" id="horasAssistencial"
+                    <input required type="number" class="form-control" id="horasAssistencial"
                         value="${atividade.horasAssistencial}" name="horasAssistencial" placeholder="Carga horária">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="horasExecutiva">Carga horária executiva</label>
-                    <input type="number" class="form-control" id="horasExecutiva" value="${atividade.horasExecutiva}"
+                    <input required type="number" class="form-control" id="horasExecutiva" value="${atividade.horasExecutiva}"
                         name="horasExecutiva" placeholder="Carga horária">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="horasFinanceira">Carga horária financeira</label>
-                    <input type="number" class="form-control" id="horasFinanceira" value="${atividade.horasFinanceira}"
+                    <input required type="number" class="form-control" id="horasFinanceira" value="${atividade.horasFinanceira}"
                         name="horasFinanceira" placeholder="Carga horária">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="horasJuridica">Carga horária jurídica</label>
-                    <input type="number" class="form-control" id="horasJuridica" value="${atividade.horasJuridica}"
+                    <input required type="number" class="form-control" id="horasJuridica" value="${atividade.horasJuridica}"
                         name="horasJuridica" placeholder="Carga horária">
                 </div>
             </div>

@@ -70,36 +70,36 @@
             <input type="hidden" name="id" value="${sede.id}">
             <div class="form-group">
                 <label for="nomeFantasia">Nome fantasia</label>
-                <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia"
+                <input required type="text" class="form-control" id="nomeFantasia" name="nomeFantasia"
                     placeholder="Nome fantasia" value="${sede.nomeFantasia}">
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="federacao">Estado da Federação</label>
-                    <input type="text" class="form-control" id="federacao" name="federacao"
+                    <input required type="text" class="form-control" id="federacao" name="federacao"
                         placeholder="Estado da Federação" value="${sede.federacao}">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="cidade">Cidade</label>
-                    <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade"
+                    <input required type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade"
                         value="${sede.cidade}">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="bairro">Bairro</label>
-                    <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro"
+                    <input required type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro"
                         value="${sede.bairro}">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="telefone">Telefone</label>
-                    <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Telefone"
+                    <input required type="tel" class="form-control" id="telefone" name="telefone" placeholder="Telefone"
                         value="${sede.telefone}">
                 </div>
             </div>
             <div class="form-group">
                 <label for="enderecoWeb">Endereço da WEB</label>
-                <input type="text" class="form-control" id="enderecoWeb" name="enderecoWeb"
+                <input required type="text" class="form-control" id="enderecoWeb" name="enderecoWeb"
                     placeholder="Endereço da WEB" value="${sede.enderecoWeb}">
             </div>
             <button type="submit" class="btn btn-primary">Salvar</button>

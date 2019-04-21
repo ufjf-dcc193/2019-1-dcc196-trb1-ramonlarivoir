@@ -69,16 +69,16 @@
         <form action="membro-salvar.html" method="POST">
             <div class="form-group">
                 <label for="nome">Nome completo</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome completo">
+                <input required type="text" class="form-control" id="nome" name="nome" placeholder="Nome completo">
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="funcao">Função</label>
-                    <input type="text" class="form-control" id="funcao" name="funcao" placeholder="Função">
+                    <input required type="text" class="form-control" id="funcao" name="funcao" placeholder="Função">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="seu@email.com">
+                    <input required type="email" class="form-control" id="email" name="email" placeholder="seu@email.com">
                 </div>
             </div>
             <div class="form-row">
@@ -92,12 +92,12 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="dataEntrada">Data de entrada</label>
-                    <input type="date" class="form-control" id="dataEntrada" name="dataEntrada"
+                    <input required type="date" class="form-control" id="dataEntrada" name="dataEntrada"
                         placeholder="Dada de entrada">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="dataSaida">Data de saída</label>
-                    <input type="date" class="form-control" id="dataSaida" name="dataSaida" placeholder="Data de saída">
+                    <input required type="date" class="form-control" id="dataSaida" name="dataSaida" placeholder="Data de saída">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Salvar</button>

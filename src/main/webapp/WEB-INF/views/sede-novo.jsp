@@ -69,31 +69,31 @@
         <form action="sede-salvar.html" method="POST">
             <div class="form-group">
                 <label for="nomeFantasia">Nome fantasia</label>
-                <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia" placeholder="Nome fantasia">
+                <input required type="text" class="form-control" id="nomeFantasia" name="nomeFantasia" placeholder="Nome fantasia">
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="federacao">Estado da Federação</label>
-                    <input type="text" class="form-control" id="federacao" name="federacao" placeholder="Estado da Federação">
+                    <input required type="text" class="form-control" id="federacao" name="federacao" placeholder="Estado da Federação">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="cidade">Cidade</label>
-                    <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade">
+                    <input required type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="bairro">Bairro</label>
-                    <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro">
+                    <input required type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="telefone">Telefone</label>
-                    <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Telefone">
+                    <input required type="tel" class="form-control" id="telefone" name="telefone" placeholder="Telefone">
                 </div>
             </div>
             <div class="form-group">
                 <label for="enderecoWeb">Endereço da WEB</label>
-                <input type="text" class="form-control" id="enderecoWeb" name="enderecoWeb" placeholder="Endereço da WEB">
+                <input required type="text" class="form-control" id="enderecoWeb" name="enderecoWeb" placeholder="Endereço da WEB">
             </div>
             <button type="submit" class="btn btn-primary">Salvar</button>
             <a href="sede-listar.html" class="btn btn-danger">Cancelar</a>
