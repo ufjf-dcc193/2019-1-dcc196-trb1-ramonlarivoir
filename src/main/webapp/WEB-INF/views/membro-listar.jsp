@@ -72,7 +72,6 @@
         <table class="table text-center">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Email</th>
                     <th scope="col">Função</th>
@@ -85,7 +84,6 @@
             <tbody>
                 <c:forEach var="membro" items="${membros}">
                     <tr>
-                        <th scope="row">${membro.id}</th>
                         <td>${membro.nome}</td>
                         <td>${membro.email}</td>
                         <td>${membro.funcao}</td>

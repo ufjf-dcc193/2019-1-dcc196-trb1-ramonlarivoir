@@ -69,4 +69,26 @@ public class SedeController {
         srep.deleteById(s.getId());
         return new RedirectView("sede-listar.html");
     }
+
+    @RequestMapping("sede-detalhes.html")
+    public ModelAndView detalhes(Sede s) {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("sede-detalhes");
+        Sede sede = srep.getOne(s.getId());
+        List<Atividade> atividades = arep.findAll();
+        for (Atividade atividade : atividades) {
+            if(atividade.getOngAtividade().getId() == sede.getId()) {
+                sede.getAtividades().add(atividade);
+            }
+        }
+        List<Membro> membros = mrep.findAll();
+        for (Membro membro : membros) {
+            if(membro.getOngMembro().getId() == sede.getId()) {
+                sede.getMembros().add(membro);
+            }
+        }
+        mv.addObject("sede", sede);
+        
+        return mv;
+    }
 }

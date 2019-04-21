@@ -85,7 +85,12 @@
                 <c:forEach var="sede" items="${sedes}">
                     <tr>
                         <th scope="row">${sede.id}</th>
-                        <td>${sede.nomeFantasia}</td>
+                        <td>
+                            <form action="sede-detalhes.html" method="GET">
+                                <input type="hidden" name="id" value="${sede.id}">
+                                <button type="submit" class="btn btn-link">${sede.nomeFantasia}</button>
+                            </form>
+                        </td>
                         <td>${sede.totalHorasAssistencial}</td>
                         <td>${sede.totalHorasExecutiva}</td>
                         <td>${sede.totalHorasFinanceira}</td>

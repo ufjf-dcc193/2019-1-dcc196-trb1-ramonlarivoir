@@ -63,40 +63,127 @@
         </nav>
     </header>
     <div class="container">
-        <h1>Nova Sede</h1>
+        <h1>Deatalhes de ${sede.nomeFantasia}</h1>
     </div>
     <div class="container">
-        <form>
-            <div class="form-group">
-                <label for="nomeFantasia">Nome fantasia</label>
-                <input type="text" class="form-control" id="nomeFantasia" placeholder="Nome fantasia">
+        <input type="hidden" name="id" value="${sede.id}">
+        <div class="form-group">
+            <label for="nomeFantasia">Nome fantasia</label>
+            <input type="text" readonly class="form-control" id="nomeFantasia" name="nomeFantasia"
+                placeholder="Nome fantasia" value="${sede.nomeFantasia}">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="federacao">Estado da Federação</label>
+                <input type="text" readonly class="form-control" id="federacao" name="federacao"
+                    placeholder="Estado da Federação" value="${sede.federacao}">
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="federacao">Estado da Federação</label>
-                    <input type="text" class="form-control" id="federacao" placeholder="Estado da Federação">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="cidade">Cidade</label>
-                    <input type="text" class="form-control" id="cidade" placeholder="Cidade">
-                </div>
+            <div class="form-group col-md-6">
+                <label for="cidade">Cidade</label>
+                <input type="text" readonly class="form-control" id="cidade" name="cidade" placeholder="Cidade"
+                    value="${sede.cidade}">
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="bairro">Bairro</label>
-                    <input type="text" class="form-control" id="bairro" placeholder="Bairro">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" class="form-control" id="telefone" placeholder="Telefone">
-                </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="bairro">Bairro</label>
+                <input type="text" readonly class="form-control" id="bairro" name="bairro" placeholder="Bairro"
+                    value="${sede.bairro}">
             </div>
-            <div class="form-group">
-                <label for="enderecoWeb">Endereço da WEB</label>
-                <input type="text" class="form-control" id="enderecoWeb" placeholder="Endereço da WEB">
+            <div class="form-group col-md-6">
+                <label for="telefone">Telefone</label>
+                <input type="tel" readonly class="form-control" id="telefone" name="telefone" placeholder="Telefone"
+                    value="${sede.telefone}">
             </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
-        </form>
+        </div>
+        <div class="form-group">
+            <label for="enderecoWeb">Endereço da WEB</label>
+            <input type="text" readonly class="form-control" id="enderecoWeb" name="enderecoWeb"
+                placeholder="Endereço da WEB" value="${sede.enderecoWeb}">
+        </div>
+    </div>
+    <div class="container">
+        <table class="table text-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col" colspan="4">Total de horas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Horas assistenciais</td>
+                    <td>Horas executivas</td>
+                    <td>Horas financeiras</td>
+                    <td>Horas judiciais</td>
+                </tr>
+                <tr>
+                    <td>${sede.totalHorasAssistencial}</td>
+                    <td>${sede.totalHorasExecutiva}</td>
+                    <td>${sede.totalHorasFinanceira}</td>
+                    <td>${sede.totalHorasJuridica}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <table class="table text-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col" colspan="9">Atividades</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="col">Título</td>
+                    <td scope="col">Descrição</td>
+                    <td scope="col">Data início</td>
+                    <td scope="col">Data fim</td>
+                    <td scope="col">Horas assistenciais</td>
+                    <td scope="col">Horas executivas</td>
+                    <td scope="col">Horas financeiras</td>
+                    <td scope="col">Horas judiciais</td>
+                </tr>
+                <c:forEach var="atividade" items="${sede.atividades}">
+                    <tr>
+                        <td>${atividade.titulo}</td>
+                        <td>${atividade.descricao}</td>
+                        <td>${atividade.dataInicio}</td>
+                        <td>${atividade.dataFim}</td>
+                        <td>${atividade.horasAssistencial}</td>
+                        <td>${atividade.horasExecutiva}</td>
+                        <td>${atividade.horasFinanceira}</td>
+                        <td>${atividade.horasJuridica}</td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <table class="table text-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col" colspan="9">Membros</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="col">Nome</td>
+                    <td scope="col">Email</td>
+                    <td scope="col">Função</td>
+                    <td scope="col">Data de entrada</td>
+                    <td scope="col">Data de saída</td>
+                </tr>
+                <c:forEach var="membro" items="${sede.membros}">
+                    <tr>
+                        <td>${membro.nome}</td>
+                        <td>${membro.email}</td>
+                        <td>${membro.funcao}</td>
+                        <td>${membro.dataEntrada}</td>
+                        <td>${membro.dataSaida}</td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
     </div>
 
     <!-- Bootstrap JS -->

@@ -72,7 +72,6 @@
         <table class="table text-center table-striped text-middle">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Título</th>
                     <th scope="col">Descrição</th>
                     <th scope="col">Data início</th>
@@ -88,7 +87,6 @@
             <tbody>
                 <c:forEach var="atividade" items="${atividades}">
                     <tr>
-                        <th scope="row">${atividade.id}</th>
                         <td>${atividade.titulo}</td>
                         <td>${atividade.descricao}</td>
                         <td>${atividade.dataInicio}</td>
