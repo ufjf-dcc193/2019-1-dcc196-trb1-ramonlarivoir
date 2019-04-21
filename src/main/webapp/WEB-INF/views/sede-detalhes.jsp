@@ -110,17 +110,17 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Horas assistenciais</td>
-                    <td>Horas executivas</td>
-                    <td>Horas financeiras</td>
-                    <td>Horas judiciais</td>
+                <tr class="table-active">
+                    <td class="align-middle" scope="col">Horas assistenciais</td>
+                    <td class="align-middle" scope="col">Horas executivas</td>
+                    <td class="align-middle" scope="col">Horas financeiras</td>
+                    <td class="align-middle" scope="col">Horas judiciais</td>
                 </tr>
                 <tr>
-                    <td>${sede.totalHorasAssistencial}</td>
-                    <td>${sede.totalHorasExecutiva}</td>
-                    <td>${sede.totalHorasFinanceira}</td>
-                    <td>${sede.totalHorasJuridica}</td>
+                    <td class="align-middle">${sede.totalHorasAssistencial}</td>
+                    <td class="align-middle">${sede.totalHorasExecutiva}</td>
+                    <td class="align-middle">${sede.totalHorasFinanceira}</td>
+                    <td class="align-middle">${sede.totalHorasJuridica}</td>
                 </tr>
             </tbody>
         </table>
@@ -133,26 +133,26 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td scope="col">Título</td>
-                    <td scope="col">Descrição</td>
-                    <td scope="col">Data início</td>
-                    <td scope="col">Data fim</td>
-                    <td scope="col">Horas assistenciais</td>
-                    <td scope="col">Horas executivas</td>
-                    <td scope="col">Horas financeiras</td>
-                    <td scope="col">Horas judiciais</td>
+                <tr class="table-active">
+                    <td class="align-middle" scope="col">Título</td>
+                    <td class="align-middle" scope="col">Descrição</td>
+                    <td class="align-middle" scope="col">Data início</td>
+                    <td class="align-middle" scope="col">Data fim</td>
+                    <td class="align-middle" scope="col">Horas assistenciais</td>
+                    <td class="align-middle" scope="col">Horas executivas</td>
+                    <td class="align-middle" scope="col">Horas financeiras</td>
+                    <td class="align-middle" scope="col">Horas judiciais</td>
                 </tr>
                 <c:forEach var="atividade" items="${sede.atividades}">
                     <tr>
-                        <td>${atividade.titulo}</td>
-                        <td>${atividade.descricao}</td>
-                        <td>${atividade.dataInicio}</td>
-                        <td>${atividade.dataFim}</td>
-                        <td>${atividade.horasAssistencial}</td>
-                        <td>${atividade.horasExecutiva}</td>
-                        <td>${atividade.horasFinanceira}</td>
-                        <td>${atividade.horasJuridica}</td>
+                        <td class="align-middle">${atividade.titulo}</td>
+                        <td class="align-middle">${atividade.descricao}</td>
+                        <td class="align-middle">${atividade.dataInicio}</td>
+                        <td class="align-middle">${atividade.dataFim}</td>
+                        <td class="align-middle">${atividade.horasAssistencial}</td>
+                        <td class="align-middle">${atividade.horasExecutiva}</td>
+                        <td class="align-middle">${atividade.horasFinanceira}</td>
+                        <td class="align-middle">${atividade.horasJuridica}</td>
                     </tr>
                 </c:forEach>
             </tbody>
@@ -166,20 +166,20 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td scope="col">Nome</td>
-                    <td scope="col">Email</td>
-                    <td scope="col">Função</td>
-                    <td scope="col">Data de entrada</td>
-                    <td scope="col">Data de saída</td>
+                <tr class="table-active">
+                    <td class="align-middle" scope="col">Nome</td>
+                    <td class="align-middle" scope="col">Email</td>
+                    <td class="align-middle" scope="col">Função</td>
+                    <td class="align-middle" scope="col">Data de entrada</td>
+                    <td class="align-middle" scope="col">Data de saída</td>
                 </tr>
                 <c:forEach var="membro" items="${sede.membros}">
                     <tr>
-                        <td>${membro.nome}</td>
-                        <td>${membro.email}</td>
-                        <td>${membro.funcao}</td>
-                        <td>${membro.dataEntrada}</td>
-                        <td>${membro.dataSaida}</td>
+                        <td class="align-middle">${membro.nome}</td>
+                        <td class="align-middle">${membro.email}</td>
+                        <td class="align-middle">${membro.funcao}</td>
+                        <td class="align-middle">${membro.dataEntrada}</td>
+                        <td class="align-middle">${membro.dataSaida}</td>
                     </tr>
                 </c:forEach>
             </tbody>
