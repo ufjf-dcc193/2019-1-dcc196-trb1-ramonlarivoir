@@ -1,5 +1,4 @@
 <%@page pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Lista de Membros</title>
+    <title>Sistema de Gestão</title>
 </head>
 
 <body>
@@ -63,49 +62,13 @@
         </nav>
     </header>
     <div class="container">
-        <h1>Lista de Membros</h1>
-    </div>
-    <div class="container">
-        <a href="membro-novo.html" class="btn btn-success">+</a>
-    </div>
-    <div class="container">
-        <table class="table text-center">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Função</th>
-                    <th scope="col">Data de entrada</th>
-                    <th scope="col">Data de saída</th>
-                    <th scope="col">ONG</th>
-                    <th scope="col" colspan="2">Ação</th>
-                </tr>
-            </thead>
-            <tbody>
-                <c:forEach var="membro" items="${membros}">
-                    <tr>
-                        <td class="align-middle">${membro.nome}</td>
-                        <td class="align-middle">${membro.email}</td>
-                        <td class="align-middle">${membro.funcao}</td>
-                        <td class="align-middle">${membro.dataEntrada}</td>
-                        <td class="align-middle">${membro.dataSaida}</td>
-                        <td class="align-middle">${membro.ongMembro.nomeFantasia}</td>
-                        <td>
-                            <form method="POST" action="membro-editar.html">
-                                <input type="hidden" name="id" value="${membro.id}">
-                                <button type="submit" class="btn btn-link">Editar</button>
-                            </form>
-                        </td>
-                        <td>
-                            <form method="POST" action="membro-confirmacao.html">
-                                <input type="hidden" name="id" value="${membro.id}">
-                                <button type="submit" class="btn btn-link">Excluir</button>
-                            </form>
-                        </td>
-                    </tr>
-                </c:forEach>
-            </tbody>
-        </table>
+        <h1>Confirmação</h1>
+        <h5>Tem certeza que deseja excluir a atividade "${atividade.titulo}"?</h5>
+        <form action="atividade-excluir.html" method="POST">
+            <input type="hidden" name="id" value="${atividade.id}">
+            <a href="atividade-listar.html" class="btn btn-secondary">Cancelar</a>
+            <button type="submit" class="btn btn-danger">Excluir</button>
+        </form>
     </div>
 
     <!-- Bootstrap JS -->

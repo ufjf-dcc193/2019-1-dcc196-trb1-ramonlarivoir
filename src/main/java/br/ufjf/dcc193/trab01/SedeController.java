@@ -31,6 +31,26 @@ public class SedeController {
         mv.setViewName("sede-listar");
 
         List<Sede> sedes = srep.findAll();
+        List<Atividade> atividades = arep.findAll();
+        for (Sede sede : sedes) {
+            int ha = 0;
+            int he = 0;
+            int hf = 0;
+            int hj = 0;
+            for (Atividade atividade : atividades) {
+                if (atividade.getOngAtividade().getId() == sede.getId()) {
+                    ha += atividade.getHorasAssistencial();
+                    he += atividade.getHorasExecutiva();
+                    hf += atividade.getHorasFinanceira();
+                    hj += atividade.getHorasJuridica();
+                }
+            }
+            sede.setTotalHorasAssistencial(ha);
+            sede.setTotalHorasExecutiva(he);
+            sede.setTotalHorasFinanceira(hf);
+            sede.setTotalHorasJuridica(hj);
+            srep.save(sede);
+        }
         mv.addObject("sedes", sedes);
         return mv;
     }
@@ -88,6 +108,16 @@ public class SedeController {
                 sede.getMembros().add(membro);
             }
         }
+        mv.addObject("sede", sede);
+
+        return mv;
+    }
+
+    @RequestMapping("sede-confirmacao.html")
+    public ModelAndView confirma(Sede s) {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("sede-confirmacao");
+        Sede sede = srep.getOne(s.getId());
         mv.addObject("sede", sede);
 
         return mv;

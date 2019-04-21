@@ -63,4 +63,14 @@ public class MembroController {
         mrep.deleteById(m.getId());
         return new RedirectView("membro-listar.html");
     }
+
+    @RequestMapping("membro-confirmacao.html")
+    public ModelAndView confirma(Membro m) {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("membro-confirmacao");
+        Membro membro = mrep.getOne(m.getId());
+        mv.addObject("membro", membro);
+
+        return mv;
+    }
 }

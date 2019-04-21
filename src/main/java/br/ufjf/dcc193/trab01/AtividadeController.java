@@ -54,18 +54,7 @@ public class AtividadeController {
 
     @RequestMapping("atividade-alterar.html")
     public RedirectView alterar(Atividade a) {
-        Atividade at = arep.getOne(a.getId());
-        Sede s = srep.getOne(a.getOngAtividade().getId());
-        int difHora = a.getHorasAssistencial() - at.getHorasAssistencial();
-        s.setTotalHorasAssistencial(s.getTotalHorasAssistencial() + difHora);
-        difHora = a.getHorasExecutiva() - at.getHorasExecutiva();
-        s.setTotalHorasExecutiva(s.getTotalHorasExecutiva() + difHora);
-        difHora = a.getHorasFinanceira() - at.getHorasFinanceira();
-        s.setTotalHorasFinanceira(s.getTotalHorasFinanceira() + difHora);
-        difHora = a.getHorasJuridica() - at.getHorasJuridica();
-        s.setTotalHorasJuridica(s.getTotalHorasJuridica() + difHora);
         arep.save(a);
-        srep.save(s);
         return new RedirectView("atividade-listar.html");
     }
 
@@ -83,14 +72,17 @@ public class AtividadeController {
 
     @RequestMapping("atividade-excluir.html")
     RedirectView remove(Atividade a){
-        Sede s = a.getOngAtividade();
-        s
-            .setTotalHorasAssistencial((s.getTotalHorasAssistencial()-a.getHorasAssistencial()))
-            .setTotalHorasExecutiva((s.getTotalHorasExecutiva()-a.getHorasExecutiva()))
-            .setTotalHorasFinanceira((s.getTotalHorasFinanceira()-a.getHorasFinanceira()))
-            .setTotalHorasJuridica((s.getTotalHorasJuridica()-a.getHorasJuridica()));
-        srep.save(s);
         arep.deleteById(a.getId());
         return new RedirectView("atividade-listar.html");
+    }
+
+    @RequestMapping("atividade-confirmacao.html")
+    public ModelAndView confirma(Atividade a) {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("atividade-confirmacao");
+        Atividade atividade = arep.getOne(a.getId());
+        mv.addObject("atividade", atividade);
+
+        return mv;
     }
 }

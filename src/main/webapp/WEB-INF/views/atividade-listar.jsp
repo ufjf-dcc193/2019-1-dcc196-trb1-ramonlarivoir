@@ -87,15 +87,15 @@
             <tbody>
                 <c:forEach var="atividade" items="${atividades}">
                     <tr>
-                        <td>${atividade.titulo}</td>
-                        <td>${atividade.descricao}</td>
-                        <td>${atividade.dataInicio}</td>
-                        <td>${atividade.dataFim}</td>
-                        <td>${atividade.horasAssistencial}</td>
-                        <td>${atividade.horasExecutiva}</td>
-                        <td>${atividade.horasFinanceira}</td>
-                        <td>${atividade.horasJuridica}</td>
-                        <td>${atividade.ongAtividade.nomeFantasia}</td>
+                        <td class="align-middle">${atividade.titulo}</td>
+                        <td class="align-middle">${atividade.descricao}</td>
+                        <td class="align-middle">${atividade.dataInicio}</td>
+                        <td class="align-middle">${atividade.dataFim}</td>
+                        <td class="align-middle">${atividade.horasAssistencial}</td>
+                        <td class="align-middle">${atividade.horasExecutiva}</td>
+                        <td class="align-middle">${atividade.horasFinanceira}</td>
+                        <td class="align-middle">${atividade.horasJuridica}</td>
+                        <td class="align-middle">${atividade.ongAtividade.nomeFantasia}</td>
                         <td>
                             <form method="POST" action="atividade-editar.html">
                                 <input type="hidden" name="id" value="${atividade.id}">
@@ -103,7 +103,7 @@
                             </form>
                         </td>
                         <td>
-                            <form method="POST" action="atividade-excluir.html">
+                            <form method="POST" action="atividade-confirmacao.html">
                                 <input type="hidden" name="id" value="${atividade.id}">
                                 <button type="submit" class="btn btn-link">Excluir</button>
                             </form>

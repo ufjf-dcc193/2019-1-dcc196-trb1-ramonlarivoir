@@ -72,7 +72,6 @@
         <table class="table text-center">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Horas assistenciais</th>
                     <th scope="col">Horas executivas</th>
@@ -84,17 +83,16 @@
             <tbody>
                 <c:forEach var="sede" items="${sedes}">
                     <tr>
-                        <th scope="row">${sede.id}</th>
                         <td>
                             <form action="sede-detalhes.html" method="GET">
                                 <input type="hidden" name="id" value="${sede.id}">
                                 <button type="submit" class="btn btn-link">${sede.nomeFantasia}</button>
                             </form>
                         </td>
-                        <td>${sede.totalHorasAssistencial}</td>
-                        <td>${sede.totalHorasExecutiva}</td>
-                        <td>${sede.totalHorasFinanceira}</td>
-                        <td>${sede.totalHorasJuridica}</td>
+                        <td class="align-middle">${sede.totalHorasAssistencial}</td>
+                        <td class="align-middle">${sede.totalHorasExecutiva}</td>
+                        <td class="align-middle">${sede.totalHorasFinanceira}</td>
+                        <td class="align-middle">${sede.totalHorasJuridica}</td>
                         <td>
                             <form method="POST" action="sede-editar.html">
                                 <input type="hidden" name="id" value="${sede.id}">
@@ -102,7 +100,7 @@
                             </form>
                         </td>
                         <td>
-                            <form method="POST" action="sede-excluir.html">
+                            <form method="POST" action="sede-confirmacao.html">
                                 <input type="hidden" name="id" value="${sede.id}">
                                 <button type="submit" class="btn btn-link">Excluir</button>
                             </form>
