@@ -38,7 +38,7 @@ public class SedeController {
     @RequestMapping("sede-salvar.html")
     public RedirectView salvar(Sede sede) {
         srep.save(sede);
-        
+
         return new RedirectView("sede-listar.html");
     }
 
@@ -48,24 +48,25 @@ public class SedeController {
         mv.setViewName("sede-editar");
         Sede sede = srep.getOne(s.getId());
         mv.addObject("sede", sede);
-        
+
         return mv;
     }
 
     @RequestMapping("sede-excluir.html")
     RedirectView remove(Sede s){
-        // Sede sede = srep.getOne(s.getId());
-        // List<Atividade> ats = sede.getAtividades();
-        // for (Atividade at : ats) {
-        //     arep.deleteById(at.getId());
-        //     sede.getAtividades().remove(at);
-        // }
-        // List<Membro> ms = sede.getMembros();
-        // for (Membro m : ms) {
-        //     mrep.deleteById(m.getId());
-        //     sede.getMembros().remove(m);
-        // }
-        // srep.save(sede);
+        Sede sede = srep.getOne(s.getId());
+        List<Atividade> atividades = arep.findAll();
+        for (Atividade atividade : atividades) {
+            if(atividade.getOngAtividade().getId() == sede.getId()) {
+                arep.deleteById(atividade.getId());
+            }
+        }
+        List<Membro> membros = mrep.findAll();
+        for (Membro membro : membros) {
+            if (membro.getOngMembro().getId() == sede.getId()) {
+                mrep.deleteById(membro.getId());
+            }
+        }
         srep.deleteById(s.getId());
         return new RedirectView("sede-listar.html");
     }
@@ -77,18 +78,18 @@ public class SedeController {
         Sede sede = srep.getOne(s.getId());
         List<Atividade> atividades = arep.findAll();
         for (Atividade atividade : atividades) {
-            if(atividade.getOngAtividade().getId() == sede.getId()) {
+            if (atividade.getOngAtividade().getId() == sede.getId()) {
                 sede.getAtividades().add(atividade);
             }
         }
         List<Membro> membros = mrep.findAll();
         for (Membro membro : membros) {
-            if(membro.getOngMembro().getId() == sede.getId()) {
+            if (membro.getOngMembro().getId() == sede.getId()) {
                 sede.getMembros().add(membro);
             }
         }
         mv.addObject("sede", sede);
-        
+
         return mv;
     }
 }
